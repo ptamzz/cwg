@@ -71,13 +71,11 @@ limitations under the License.
 	.dp-radius { height: 36px; width: 36px; overflow: hidden; border-radius: 50%; float: right; margin-top: -3.6em; margin-right: 1.4em; }
 	.airlogo-radius { height: 36px; width: 36px; position: absolute; left: 1.4em;  overflow: hidden; border-radius: 50%; }
 	.view-in-ar { height: 46px; width: 46px; position: absolute; right: 2em; overflow: hidden; bottom: 1.2em; z-index: 100; background-color: #FFF; padding: 13px; border-radius: 23px; }
-	.header-bar { height: 56px; font-family: "Google Sans", "Roboto", sans-serif; font-weight: 500; position: relative; color: #3C4043; font-size: 18px; } 
+	.header-bar { height: 56px; font-family: "Google Sans", "Roboto", sans-serif; font-weight: 500; position: fixed; color: #3C4043; font-size: 18px; } 
 	 
 	 /* Hide AR button on iOS, Display on Android*/
-	@supports (-webkit-overflow-scrolling: touch) {
-	  /* CSS specific to iOS devices */ 
-	  .view-in-ar { display: none; }
-	}
+	@supports (-webkit-overflow-scrolling: touch) { /* CSS specific to iOS devices */ .view-in-ar { display: none; } }
+	.fixed-push { margin-top: 1.4em !important; }
 </style>
 </head>
   <body>
@@ -91,7 +89,7 @@ limitations under the License.
 
 
   <!-- End Navbar -->
-    <main id="content" role="main" class="">
+    <main id="content" role="main" class="fixed-push">
       <article class="recipe-article">
         
         <header style="position: relative">
